@@ -21,3 +21,13 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+To Build for Prod:
+
+https://codingexplained.com/coding/front-end/vue-js/building-vue-js-applications-for-production
+
+npm run build
+
+copy dist folder contents to webserver
+
