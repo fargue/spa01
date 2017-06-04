@@ -1,19 +1,19 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
 Vue.use(VueRouter)
-Vue.use(VueResource)
 Vue.config.productionTip = false
 
 import Hello from './components/Hello'
 import About from './components/About'
 import Grid from './components/Grid'
+import APIGrid from './components/APIGrid'
 
 const routes = [
   { path: '/', component: Hello },
   { path: '/about', component: About },
-  { path: '/grid', component: Grid }
+  { path: '/grid', component: Grid },
+  { path: '/apigrid', component: APIGrid }
 ]
 
 // Create the router instance and pass the `routes` option
