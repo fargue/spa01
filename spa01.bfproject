@@ -2,8 +2,8 @@ c2e.convert_special: 0
 e2c.convert_num: 0
 openfiles: /home/jrarnold/work/spa01/src/App.vue:0:0:0:
 openfiles: /home/jrarnold/work/spa01/src/main.js:0:0:0:
-openfiles: /home/jrarnold/work/spa01/src/components/DevUserData.vue:424:0:1:
-openfiles: /home/jrarnold/work/spa01/src/utils/get-user-data.js:339:0:0:
+openfiles: /home/jrarnold/work/spa01/src/components/DevUserData.vue:1099:503:1:
+openfiles: /home/jrarnold/work/spa01/src/utils/get-user-data.js:869:0:0:
 snr_recursion_level: 5
 convertcolumn_horizontally: 0
 adv_open_matchname: 0
@@ -19,6 +19,7 @@ c2e.convert_iso: 0
 opendir: file:///home/jrarnold/work/spa01/src/utils
 wrap_text_default: 0
 default_mime_type: text/plain
+ssearch_text: then
 snr_casesens: 0
 view_blocks: 1
 name: spa01
@@ -51,6 +52,8 @@ snr_escape_chars: 0
 fb_viewmode: 0
 c2e.convert_symbol: 0
 spell_lang: en_US
+searchlist: fetch
+searchlist: then
 ssearch_dotmatchall: 0
 autocomplete: 1
 outputb_show_all_output: 0

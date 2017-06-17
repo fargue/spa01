@@ -1,16 +1,19 @@
 <template>
   <div>
-    <h3 class="text-center">OPLEVDEV User Information</h3>
+    <h1 class="text-center">OPLEVDEV User Information</h1>
+    <form v-on:submit.prevent="getOPLEVDEVUserData">
+      <input v-model="username" placeholder="Enter Oracle User Name"/>
+    </form>
     <hr/>
 	 <div v-if="OPLEVDEVUserData.data">
 	 	<h2>Status: {{ OPLEVDEVUserData.status }}</h2>
 	 	<h2>Message: {{ OPLEVDEVUserData.message }}</h2>
-	 	<h2>UserName: {{ (OPLEVDEVUserData.data).user_data.username }}</h2>
-	 	<h2>User Id: {{ (OPLEVDEVUserData.data).user_data.user_id }}</h2>
-	 	<h2>Account Status: {{ (OPLEVDEVUserData.data).user_data.account_status }}</h2>
-	 	<h2>Default Tablespace: {{ (OPLEVDEVUserData.data).user_data.default_tablespace }}</h2>
-	 	<h2>Create Date: {{ (OPLEVDEVUserData.data).user_data.created }}</h2>
-	 	<h2>Profile: {{ (OPLEVDEVUserData.data).user_data.profile }}</h2>
+	 	<h2>User Message: {{ OPLEVDEVUserData.data.user_message }}</h2>
+	 	<h2 v-for="userx in (OPLEVDEVUserData.data.user_data.user)">
+	 		{{ userx.username }},
+	 		{{ userx.user_id }},
+	 	</h2>
+	 	<h3>Data is {{OPLEVDEVUserData.data.user_data.user[0]}}</h3>
 	 </div>
 
   </div>
@@ -23,15 +26,17 @@ export default {
   name: 'OPLEVDEVUserData',
   data() {
     return {
+      username: '',
       OPLEVDEVUserData: '',
     };
   },
   methods: {
     getOPLEVDEVUserData() {
-      getOPLEVDEVUserData().then((userdata) => {
-        this.OPLEVDEVUserData = userdata;
-        console.log( userdata );
-      });
+      
+    	   getOPLEVDEVUserData(this.username).then((userdata) => {
+   	     this.OPLEVDEVUserData = userdata;
+      	  console.log(userdata);
+      	});
     },
   },
   mounted() {

@@ -5,8 +5,8 @@ const DEV_BASE_URL = 'https://dba.dev.multiservice.com';
 
 export {getOPLEVDEVUserData, getOPLEVBETUserData, getOPLEVPRDUserData};
 
-function getOPLEVDEVUserData() {
-  const url = `${BASE_URL}/api-rest/user/username/JRARNOLDDBA`;
+function getOPLEVDEVUserData(name) {
+  const url = `${BASE_URL}/api-rest/user/username/` + name;
   console.log('getting data');
   return axios.get(url).then(response => response.data);
 }
